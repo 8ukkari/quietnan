@@ -8,7 +8,7 @@ category: "programming"
 tags:
   - "cuda"
 description: "Cycle in a graph means that it has path which certain vertex is connected via other vertices. Directed and undirected graph have different type of cycle as the following image, and algorithm to detect cycle for them are also different. Here is to introduce recursive version of depth-first search implementation."
-socialImage: "/media/memory-allocation-for-array-of-structures-with-array-in-cuda"
+socialImage: "/media/memory-allocation-for-array-of-structures-with-array-in-cuda/aos.png"
 ---
 
 It is annoying to write CUDA code about array of structures with array, especially when the number of arrays are decided in run-time.
