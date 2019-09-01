@@ -7,7 +7,8 @@ slug: "/posts/memory-allocation-for-array-of-structures-with-array-in-cuda/"
 category: "programming"
 tags:
   - "cuda"
-description: "Cycle in a graph means that it has path which certain vertex is connected via other vertices. Directed and undirected graph have different type of cycle as the following image, and algorithm to detect cycle for them are also different. Here is to introduce recursive version of depth-first search implementation."
+description: "It is annoying to write CUDA code about array of structures with array, especially when the number of arrays are decided in run-time.
+If you want to keep the data structure in CUDA, you need to use temporary host variable of the structure which has device address of the array defined in the structure, then copy the host variable into device memory. Two times memory copy between host and device memory is required. The more nested array of structure is, the more complex to implement code to copy memory is."
 socialImage: "/media/memory-allocation-for-array-of-structures-with-array-in-cuda/aos.png"
 ---
 
