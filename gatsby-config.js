@@ -131,12 +131,6 @@ module.exports = {
               username: '8ukkari',
               includeDefaultCss: true
             }
-          },
-          {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              strict: 'ignore'
-            }
           }
         ]
       }
