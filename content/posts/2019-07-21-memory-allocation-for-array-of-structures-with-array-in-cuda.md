@@ -1,6 +1,6 @@
 ---
 title: Memory allocation for array of structures with array in CUDA
-date: "2019-09-01T10:00:00Z"
+date: "2019-07-21T10:00:00Z"
 template: "post"
 draft: false
 slug: "/posts/memory-allocation-for-array-of-structures-with-array-in-cuda/"
@@ -25,6 +25,7 @@ Its solution is to change data structure. It is to erase the nested structure, a
 ![structure of array](/media/memory-allocation-for-array-of-structures-with-array-in-cuda/soa.png)
 
 The following code is as sample implementation of the data structures:
-<script src="https://gist.github.com/8ukkari/7226eac1ea07ab8f4e053573ab15eb59.js"></script>
+
+`gist:7226eac1ea07ab8f4e053573ab15eb59`
 
 This code requires the number of arrays in advance. I am not very familiar with how to implement code which changes the number of elements in array in run-time. It may uses whole_arr like as memory pool... If you know about it, please feedback.
