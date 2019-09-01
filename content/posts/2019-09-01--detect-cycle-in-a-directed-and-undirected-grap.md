@@ -22,7 +22,7 @@ When control to traverse a target graph reaches certain vertex and if the vertex
 
 Result of detection will propagate from a vertex in which a cycle found, or leaf vertex.
 
-`gist:32ceed06567b7a547f836d2322fc7122`
+`gist:8ukkari/32ceed06567b7a547f836d2322fc7122`
 
 **behavior with a cycle:**
 
@@ -32,7 +32,7 @@ Result of detection will propagate from a vertex in which a cycle found, or leaf
 
 When control to traverse a target graph reaches certain vertex and if a subtree rooted from the vertex is not confirmed that it does not have any cycles but it was found before, the graph has a cycle. If it is not, the control moves to done to neighbor vertices of the vertex.
 
-`gist:ef1c405ca17b3bd49d6e74567636ab2b`
+`gist:8ukkari/ef1c405ca17b3bd49d6e74567636ab2b`
 
 **behavior with a cycle:**
 
