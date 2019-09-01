@@ -126,7 +126,7 @@ module.exports = {
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links',
           {
-            resolve: 'gatsby-remark-embed-gist',
+            resolve: "gatsby-remark-embed-gist",
             options: {
               username: '8ukkari'
             }
