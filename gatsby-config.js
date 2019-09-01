@@ -128,8 +128,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-embed-gist',
             options: {
-              username: '8ukkari',
-              includeDefaultCss: true
+              username: '8ukkari'
             }
           }
         ]
