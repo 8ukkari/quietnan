@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: '8',
+  subtitle: 'interested in movie, manga and programming',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -15,6 +15,7 @@ module.exports = {
       label: 'Articles',
       path: '/'
     },
+    /*
     {
       label: 'About me',
       path: '/pages/about'
@@ -23,21 +24,22 @@ module.exports = {
       label: 'Contact me',
       path: '/pages/contacts'
     }
+    */
   ],
   author: {
-    name: 'John Doe',
+    name: '8',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'interested in movie, manga and programming',
     contacts: {
       email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
+      facebook: '',
+      telegram: '',
+      twitter: '',
       github: '#',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: '',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: ''

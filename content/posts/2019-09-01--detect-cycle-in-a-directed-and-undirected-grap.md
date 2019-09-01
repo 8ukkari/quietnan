@@ -9,7 +9,7 @@ tags:
   - "python"
   - "algorithm"
 description: "Cycle in a graph means that it has path which certain vertex is connected via other vertices. Directed and undirected graph have different type of cycle as the following image, and algorithm to detect cycle for them are also different. Here is to introduce recursive version of depth-first search implementation."
-socialImage: "/media/image-2.jpg"
+socialImage: "/media/detect-cycle-in-a-directed-and-undirected-grap/has_cycle_directed_graph.jpg"
 ---
 
 Cycle in a graph means that it has path which certain vertex is connected via other vertices. Directed and undirected graph have different type of cycle as the following image, and algorithm to detect cycle for them are also different. Here is to introduce recursive version of depth-first search implementation.
