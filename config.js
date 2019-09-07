@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: '8 @ quietNaN',
+  title: 'quietNaN',
   subtitle: 'interested in movie, manga and programming',
   copyright: '© All rights reserved.',
   disqusShortname: '',
@@ -27,7 +27,7 @@ module.exports = {
     */
   ],
   author: {
-    name: '8',
+    name: '8 @ quietNaN',
     photo: '/photo.jpg',
     bio: 'interested in movie, manga and programming',
     contacts: {
