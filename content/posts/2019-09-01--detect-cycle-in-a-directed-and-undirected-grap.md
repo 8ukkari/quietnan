@@ -27,6 +27,45 @@ class Node(object):
   def __init__(self, id, neighbors):
     self.id = id
     self.neighbors = neighbors
+    self.is_visited = False
+
+
+def has_cycle(node, parent):
+  if node.is_visited:
+    return True
+  visit(node)
+  for neigbhor in node.neighbors:
+    if None != parent and neigbhor == parent:
+      continue
+    else:
+      if has_cycle(neighbor):
+        return True
+  return False
+
+
+def main():
+  # please give code to make graph
+  print("has cycle = " + has_cycle(first_node, []))
+
+  
+if__name__ == "__main__":
+  main()
+
+```
+
+**behavior with a cycle:**
+
+![has cycle in undirected graph](/media/detect-cycle-in-a-directed-and-undirected-grap/has_cycle_undirected_graph.png)
+
+## for directed graph
+
+When control to traverse a target graph reaches certain vertex and if a subtree rooted from the vertex is not confirmed that it does not have any cycles but it was found before, the graph has a cycle. If it is not, the control moves to done to neighbor vertices of the vertex.
+
+```python
+class Node(object):
+  def __init__(self, id, neighbors):
+    self.id = id
+    self.neighbors = neighbors
     self.not_has_cycle = False
     self.is_visited = False
 
@@ -52,16 +91,6 @@ def main():
 if__name__ == "__main__":
   main()
 ```
-
-**behavior with a cycle:**
-
-![has cycle in undirected graph](/media/detect-cycle-in-a-directed-and-undirected-grap/has_cycle_undirected_graph.png)
-
-## for directed graph
-
-When control to traverse a target graph reaches certain vertex and if a subtree rooted from the vertex is not confirmed that it does not have any cycles but it was found before, the graph has a cycle. If it is not, the control moves to done to neighbor vertices of the vertex.
-
-`gist:ef1c405ca17b3bd49d6e74567636ab2b`
 
 **behavior with a cycle:**
 

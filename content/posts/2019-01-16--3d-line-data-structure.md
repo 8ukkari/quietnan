@@ -39,4 +39,70 @@ You need to calculate parameter value of projected on the line, then you can get
 
 **Sample code in C++:**
 
-`gist:08b58c431fe23338fd1836ec825354ad`
+```cpp
+#pragma once
+#include <string>
+#include <sstream>
+#include <tuple>
+
+#include "../Eigen/Core"
+
+
+class Line
+{
+    Eigen::Vector3d root_;
+    Eigen::Vector3d dir_;
+
+public:
+    Line()
+        : root_(0, 0, 0)
+        , dir_(0, 0, 1)
+    {}
+
+
+    Line(const Eigen::Vector3d& o, const Eigen::Vector3d& d)
+        : root_(o)
+        , dir_(d.normalized())
+    {}
+
+
+    Eigen::Vector3d position(double param) const { return root_ + param * dir_; }
+
+
+    Eigen::Vector3d& root() { return root_; }
+    const Eigen::Vector3d& root() const { return root_; }
+
+
+    Eigen::Vector3d& dir() { return dir_; }
+    const Eigen::Vector3d& dir() const { return dir_; }
+};
+
+
+std::tuple<Eigen::Vector3d, double> project(const Line& line, const Eigen::Vector3d& point)
+{
+    auto param = (point - line.root()).dot(line.dir());
+    return std::make_tuple(line.position(param), param);
+}
+
+
+inline std::string str(const Eigen::Vector3d& vec)
+{
+    std::stringstream ss;
+    ss << vec.x() << ", " << vec.y() << ", " << vec.z();
+    return ss.str();
+}
+
+
+int main(int argc, char* argv[])
+{
+    auto line = Line(Eigen::Vector3d(0, 0, 0), Eigen::Vector3d(1, 1, 0));
+    auto point = Eigen::Vector3d(1, 0, 0);
+    auto pos_param = project(line, point);
+    std::cout << "line root = (" << str(line.root()) << ")\n";
+    std::cout << "line dir  = (" << str(line.dir()) << ")\n";
+    std::cout << "point to be projected = (" << str(point) << ")\n";
+    std::cout << "projected point = (" << str(std::get<0>(pos_param)) << ")\n";
+    std::cout << "parameter on projected point on line = " << std::get<1>(pos_param) << "\n";
+    return 0;
+}
+```

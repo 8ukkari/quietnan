@@ -43,4 +43,24 @@ Anyway, I need to know why the 5 arithmetic operation can have almost performanc
 | div                        | 0.15  | 0.20   | 0.30    | 0.95      | 6.80       | 61.50       |
 | sqrt                       | 0.25  | 0.25   | 0.30    | 0.90      | 7.70       | 70.80       |
 
-`gist:3bc1d8e50d7720c57b4d014aad02914d`
+```typescript
+export function main() {
+    const num_epoch: number = 20;
+    const num_calculations: number = 100000000;
+    const start = new Date().getTime();
+    for(var n = 0; n < num_epoch; ++n){
+        for(var i = 0 ; i < num_calculations; ++i){
+            let a: number = 123;
+            let b: number = 100;
+            let c = Math.sqrt(a);
+        }
+    }   
+    const end = new Date().getTime();
+    console.log('time=' + (end - start) / num_epoch + ' ms');
+    return 0;
+}
+
+if (require.main === module) {
+    main();
+}
+```
