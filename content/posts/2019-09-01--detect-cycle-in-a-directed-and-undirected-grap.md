@@ -22,7 +22,7 @@ When control to traverse a target graph reaches certain vertex and if the vertex
 
 Result of detection will propagate from a vertex in which a cycle found, or leaf vertex.
 
-`gist:32ceed06567b7a547f836d2322fc7122`
+`gist:8ukkari/ef1c405ca17b3bd49d6e74567636ab2b?file=has_cycle_for_directed_graph.py&highlights=8`
 
 **behavior with a cycle:**
 
