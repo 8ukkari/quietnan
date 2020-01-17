@@ -22,7 +22,36 @@ When control to traverse a target graph reaches certain vertex and if the vertex
 
 Result of detection will propagate from a vertex in which a cycle found, or leaf vertex.
 
-`gist:8ukkari/ef1c405ca17b3bd49d6e74567636ab2b?file=has_cycle_for_directed_graph.py&highlights=8`
+```python
+class Node(object):
+  def __init__(self, id, neighbors):
+    self.id = id
+    self.neighbors = neighbors
+    self.not_has_cycle = False
+    self.is_visited = False
+
+
+def has_cycle(node):
+  if node.not_has_cycle:
+    return False
+  if node.is_visited:
+    return True
+  node.is_visited = True
+  for neigbhor in node.neighbors:
+      if has_loop(neighbor):
+        return True
+  node.not_has_cycle = True
+  return False
+
+
+def main():
+  # please give code to make graph
+  print("has cycle = " + has_cycle(first_node))
+
+  
+if__name__ == "__main__":
+  main()
+```
 
 **behavior with a cycle:**
 
